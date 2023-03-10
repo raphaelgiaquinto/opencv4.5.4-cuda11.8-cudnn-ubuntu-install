@@ -200,7 +200,7 @@ $ sudo ldconfig
 
 ```
 
-## 5 Makefile example including opencv
+## 5 - Makefile example including opencv
 
 ```makefile
 CC = g++
