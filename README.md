@@ -38,6 +38,13 @@ cuda version
 export cuda_version=cuda11.8
 ```
 
+cuda architecture
+```bash 
+##depending on your gpu compute cuda capability, for me it is 7.5
+#see https://developer.nvidia.com/cuda-gpus
+export cuda_arch=7.5
+```
+
 ## 1 - Install tools and required libraries
 
 ```bash
@@ -174,7 +181,7 @@ $ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D BUILD_opencv_cudacodec=OFF \
 -D WITH_CUDNN=ON \
 -D OPENCV_DNN_CUDA=ON \
--D CUDA_ARCH_BIN=7.5 \
+-D CUDA_ARCH_BIN=${cuda_arch} \
 -D WITH_V4L=ON \
 -D WITH_QT=OFF \
 -D WITH_OPENGL=ON \
